@@ -8,14 +8,12 @@ let userScore = 0
 let compScore = 0
 
 const drawGame = () =>{
-    console.log('Game was draw');
     msg.innerText = 'Game draw'
     msg.style.backgroundColor = '#754043'
 }
 
 const showWinner = (userWin, compChoice, userChoice) => {
     if(userWin === true){
-    console.log('you won')
     msg.innerText = `You Won! your ${userChoice} beats ${compChoice}`
     youtxt.innerText =`You- ${userChoice}`
     comptxt.innerText = `Computer- ${compChoice}`
@@ -24,7 +22,6 @@ const showWinner = (userWin, compChoice, userChoice) => {
     userScorePara.innerText = userScore
     }
     else{
-        console.log('you lose');
         msg.innerText = `You Lose! ${compChoice} beats your ${userChoice}`
         msg.style.backgroundColor = 'red'
         compScore++;
@@ -35,9 +32,7 @@ const showWinner = (userWin, compChoice, userChoice) => {
 }
   
 const gameResult = (userChoice) => {
-    console.log('You - ',userChoice);
     const compChoice = genCompChoice();
-    console.log('Computer -', compChoice);
     if(userChoice == compChoice){
         drawGame()
     }else{
