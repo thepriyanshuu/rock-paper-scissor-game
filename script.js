@@ -14,7 +14,7 @@ const drawGame = () =>{
 
 const showWinner = (userWin, compChoice, userChoice) => {
     if(userWin === true){
-    msg.innerText = `You Won! your ${userChoice} beats ${compChoice}`
+    msg.innerText = `You Won`
     youtxt.innerText =`You- ${userChoice}`
     comptxt.innerText = `Computer- ${compChoice}`
     msg.style.backgroundColor = 'green'
@@ -22,7 +22,7 @@ const showWinner = (userWin, compChoice, userChoice) => {
     userScorePara.innerText = userScore
     }
     else{
-        msg.innerText = `You Lose! ${compChoice} beats your ${userChoice}`
+        msg.innerText = `You Lose`
         msg.style.backgroundColor = 'red'
         compScore++;
         compScorePara.innerHTML = compScore;
